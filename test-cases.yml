@@ -260,7 +260,7 @@
     При нажатии "Sign Out" пользователь выходит из системы и попадает на стартовую страницу
   prerequisites:
     Пользователь авторизован
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -290,7 +290,7 @@
     При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о статистике игр
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -305,7 +305,7 @@
     При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о завершенных играх
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -321,7 +321,7 @@
     При нажатии на "Settings" пользователь переходит на страницу настроек своего профиля
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -511,7 +511,7 @@
     При нажатии на "Users rating" пользователь переходит на страницу рейтинга пользователей
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -753,7 +753,7 @@
     При нажатии на "Tasks" пользователь переходит на страницу списка задач
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -938,7 +938,7 @@
     При нажатии на "Tournaments" пользователь переходит на страницу списка задач
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -1012,7 +1012,7 @@
     - Ввести любые символы
     - Нажать на кнопку "Send"
   expected-result: |
-    Пользователь должен вернуться увидеть свое сообщение в чате турнирной сетки
+    Пользователь должен увидеть свое сообщение в чате турнирной сетки
 
 - summary: |
      Создание турнирной сетки
@@ -1148,7 +1148,7 @@
     При нажатии на "SourceCode" пользователь переходит на страницу CodeBattle в Github 
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -1163,7 +1163,7 @@
     При нажатии на "Hexlet" пользователь переходит на главную страницу обучающей платформы Hexlet
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -1178,7 +1178,7 @@
     При нажатии на "Join Discord" пользователь переходит к форме добавление в группу CodeBattle в Dicord
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -1193,7 +1193,7 @@
     При нажатии на "Tg#codebattle" пользователь переходит к форме добавление в группу CodeBattle в Telegram
   prerequisites:
     Пользователь авторизован.
-    Открыта страница: https://codebattle.hexlet.io/#lobby
+    Открыта страница: https://codebattle.hexlet.io/
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
@@ -1203,19 +1203,168 @@
     В новой вкладке браузера осуществлен переход на страницу добавления в группу CodeBattle в Telegram
 
 - summary: |
-    
+   Подключение к игровой сессии в лобби
   requirement: |
-    
+    Пользователь может выбрать любого соперника в лобби и подключиться к игровой сессии
   prerequisites:
-    
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
   test-data: |
-    
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
-    - 
-    - 
-    - 
+    - Выбрать соперника из списка
+    - Нажать на кнопку "Fight"
   expected-result: |
-    Пользователь должен получить письмо для сброса пароля от системы
+    Пользователь должен получиться к игровой сессии с выбранным соперником
+
+- summary: |
+   Подключение к игровой сессии в лобби
+  requirement: |
+    Пользователь может выбрать любого соперника в лобби и подключиться к игровой сессии
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Выбрать соперника из списка
+    - Нажать на кнопку "Fight"
+  expected-result: |
+    Пользователь должен получиться к игровой сессии с выбранным соперником
+
+- summary: |
+   Просмотр выбранной турнирной сетки через главную страницу
+  requirement: |
+    Пользователь может выбрать и просмотреть любую турнирную сетку
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#tournaments#completedGames
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Выбрать турнирную сетку из таблицы
+    - Нажать на кнопку "Show" в поле "Actions"
+  expected-result: |
+    Пользователь должен перейти на страницу выбранной турнирной сетки
+
+- summary: |
+   Просмотр игровой сессии в завершенных играх
+  requirement: |
+    Пользователь может выбрать любую завершенную игру и просмотреть сессию
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#completedGames
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Выбрать завершенную игру из таблицы
+    - Нажать на кнопку "Show" в поле "Actions"
+  expected-result: |
+    Пользователь должен перейти на страницу выбранной игровой сессии
+
+- summary: |
+   Отправление сообщений в общем чате на главной странице
+  requirement: |
+    Пользователь может отправлять сообщения в общем чате на главной странице
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на поле ввода текста в чате
+    - Ввести любые символы
+    - Нажать на кнопку "Send"
+  expected-result: |
+    Пользователь должен увидеть свое сообщение в общем чате главной страницы
+
+- summary: |
+   Создание приватного канала с другим пользователем
+  requirement: |
+    Пользователь создавать приватный канал с другим пользователем
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Выбрать пользователя из блока "Online players"
+    - Нажать на имя пользоваться правой кнопкой мыши
+    - Нажать на кнопку "Direct message"
+  expected-result: |
+    Пользователь должен увидеть уведомление в чате о создании приватного канала с выбранным пользователем
+
+- summary: |
+   Фильтрация таблицы лидеров за прошедшую неделю
+  requirement: |
+    В таблице "Leaderboard" есть возможность фильтровать активных пользователей за прошедшую неделю
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на "Week" в таблице
+  expected-result: |
+    Пользователь должен увидеть таблицу с отфильтрованными активными пользователями за последнюю неделю
+
+- summary: |
+   Фильтрация таблицы лидеров за прошедший месяц
+  requirement: |
+    В таблице "Leaderboard" есть возможность фильтровать активных пользователей за прошедший месяц
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на "Month" в таблице
+  expected-result: |
+    Пользователь должен увидеть таблицу с отфильтрованными активными пользователями за прошедший месяц
+
+- summary: |
+   Фильтрация таблицы лидеров за все время
+  requirement: |
+    В таблице "Leaderboard" есть возможность фильтровать активных пользователей за все время
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на "All" в таблице
+  expected-result: |
+    Пользователь должен увидеть таблицу с отфильтрованными активными пользователями за все время
+
+- summary: |
+   Переход в ТОП лист из таблицы лидеров
+  requirement: |
+    Пользователь должен осуществлять переход к странице рейтинга пользователей черезе "TOP List" в таблице лидеров
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на "TOP List" в таблице
+  expected-result: |
+    Пользователь должен перейти на страницу "Users rating"
+
+- summary: |
+     Создание игры на главной странице
+  requirement: |
+    Пользователь может создать новую игру на главной странице 
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на "Create a game"
+    - Выбрать параметры игры
+    - Нажать кнопку "Create Battle"
+  expected-result: |
+    Создается игравая сессия в соответствии с выбранными параметрами
 
 - summary: |
     
