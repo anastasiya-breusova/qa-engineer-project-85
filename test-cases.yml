@@ -1,32 +1,565 @@
 ---
 - summary: |
-    Проверка входа пользователя с существующими логином и паролем
+    Регистрация на сайте через форму регистрации
   requirement: |
-    При верном вводе логине и пароля пользователь должен войти в систему
+    При верно заполненных полях формы регистрации происходит создание и авторизация пользователя в системе
   prerequisites: |
-    Это условия, которые необходимы для проведения тест-кейса. Они должны быть выполнены еще до запуска тест-кейса.
-    Например: открыта страница логина
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
-    Тестовые данные
-    Логин = ilona Пароль = password
+    Логин = junior Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
   steps:
-    - Вводим логин
-    - Вводим пароль
-    - Нажимаем кнопку «Войти»
+    - Ввести Логин
+    - Ввести Почту
+    - Ввести Пароль
+    - Ввести Пароль
+    - Нажать кнопку "Submit"
   expected-result: |
     Пользователь должен попасть на главную страницу
 
 - summary: |
-    Проверка входа пользователя с несуществующими логином и паролем
+    Регистрация на сайте через GitHub
   requirement: |
-    При неправильном логине или пароле пользователь должен получить сообщение об ошибке
+    При верно заполненных полях формы регистрации через GitHub происходит создание и авторизация пользователя в системе
   prerequisites:
-    Открыта страница логина
+    Создан профиль в Github
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
-    Логин = Логин = hexlet Пароль = badpass
+    Логин Github = junior@gmail.com Пароль Github = rFO1nfg
   steps:
-    - Вводим логин
-    - Вводим пароль
-    - Нажимаем кнопку «Войти»
+    - Нажимаем кнопку "Sign in with Github"
+    - Ввести логин Github
+    - Ввести пароль Github
+    - Нажать кнопку "Sign in"
   expected-result: |
     Пользователь должен попасть на главную страницу
+
+- summary: |
+    Регистрация на сайте через Discord
+  requirement: |
+    При верно заполненных полях формы регистрации через Discord происходит создание и авторизация пользователя в системе
+  prerequisites:
+    Создан профиль в Discord
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Логин Discord = junior@gmail.com Пароль Discord = rFO1nfg
+  steps:
+    - Нажимаем кнопку "Sign in with Discord"
+    - Ввести логин Discord
+    - Ввести пароль Discord
+    - Нажать кнопку "Вход"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Проверка отображения ошибки при пустом поле "Nickname" на странице регистрации
+  requirement: |
+    Поле "Nickname" на странице регистрации должно быть заполнено
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести почту
+    - Ввести пароль
+    - Ввести пароль
+  expected-result: |
+    Пользователь должен получить ошибку "Nickname required"
+
+- summary: |
+    Проверка отображения ошибки при добавление пробела в поле "Nickname" на странице регистрации
+  requirement: |
+    Поле "Nickname" на странице регистрации не может начинаться или заканчиваться пустым символом
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести в логин пробел
+    - Ввести почту
+    - Ввести пароль
+    - Ввести пароль
+  expected-result: |
+    Пользователь должен получить ошибку "Can't start or end with empty symbols"
+
+- summary: |
+    Проверка отображения ошибки при добавление символов или цифр в поле "Nickname" на странице регистрации
+  requirement: |
+    Поле "Nickname" на странице регистрации должно начинаться с латинской буквы
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Логин = !"№ Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести логин
+    - Ввести почту
+    - Ввести пароль
+    - Ввести пароль
+  expected-result: |
+    Пользователь должен получить ошибку "Can contain letters, numbers and underscores and should begin with a Latin letter"
+
+- summary: |
+    Проверка отображения ошибки при пустом поле "Password" на странице регистрации
+  requirement: |
+    Поле "Password" на странице регистрации должно быть заполнено
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+     Логин = junior Почта = junior@gmail.com 
+  steps:
+    - Ввести логин
+    - Ввести почту
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Password required"
+
+- summary: |
+    Проверка отображения ошибки при добавление пробела в поле "Password" на странице регистрации
+  requirement: |
+    Поле "Password" на странице регистрации не может начинаться или заканчиваться пустым символом
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Логин = junior Почта = junior@gmail.com 
+  steps:
+    - Ввести логин
+    - Ввести почту
+    - Ввести в пароль пробел
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Can't start or end with empty symbols"
+
+- summary: |
+    Проверка отображения ошибки при несовпадении пароле в полях "Password" на странице регистрации
+  requirement: |
+    Поля "Password" на странице регистрации должны совпадать
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Логин = junior Почта = junior@gmail.com Пароль = rFO1nfg$hjKm Пароль = 123456
+  steps:
+    - Ввести логин
+    - Ввести почту
+    - Ввести пароль
+    - Ввести пароль
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Passwords must match"
+
+- summary: |
+    Проверка отображения ошибки при пустом проверочном поле "Password" на странице регистрации
+  requirement: |
+    Проверочное поле "Password" на странице регистрации не должно быть пустым
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+     Логин = junior Почта = junior@gmail.com Пароль = rFO1nfg$hjKm 
+  steps:
+    - Ввести логин
+    - Ввести почту
+    - Ввести пароль
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Confirmation required"
+
+- summary: |
+    Проверка отображения ошибки при ниже допустимом количестве символов в поле "Password"
+  requirement: |
+    Поле "Password" на странице регистрации должно состоять от 6 символов
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+   Логин = junior Почта = junior@gmail.com
+  steps:
+    - В поле "Password" ввести 5 символа
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Should be from 6 to 16 characters"
+
+- summary: |
+    Проверка отображения ошибки при выше допустимом количестве символов в поле "Password"
+  requirement: |
+    Поле "Password" на странице регистрации должно состоять до 16 символов
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: |
+    Логин = junior Почта = junior@gmail.com
+  steps:
+    - В поле "Password" ввести 17 символов
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить ошибку "Should be 16 character(s) or less"
+
+- summary: |
+    Авторизация на сайте через форму авторизации
+  requirement: |
+    При верно заполненных полях формы авторизации происходит переход пользователя на главную страницу
+  prerequisites:
+    Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести почту
+    - Ввести пароль
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Авторизация на сайте через GitHub
+  requirement: |
+    При верно заполненных полях формы регистрации через GitHub происходит переход пользователя на главную страницу 
+  prerequisites:
+    Создан профиль в Github
+    Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    Логин Github = junior@gmail.com Пароль Github = rFO1nfg
+  steps:
+    - Нажимаем кнопку "Sign in with Github"
+    - Ввести логин Github
+    - Ввести пароль Github
+    - Нажать кнопку "Sign in"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Авторизация на сайте через Discord
+  requirement: |
+    При верно заполненных полях формы регистрации через Discord происходит переход пользователя на главную страницу 
+  prerequisites:
+    Создан профиль в Discord
+    Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    Логин Discord = junior@gmail.com Пароль Discord = rFO1nfg
+  steps:
+    - Нажимаем кнопку "Sign in with Discord"
+    - Ввести логин Discord
+    - Ввести пароль Discord
+    - Нажать кнопку "Вход"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Получение письма на почту для сброса пароля
+  requirement: |
+    При верно указанной почте, пользователь получает письмо для сброса пароля
+  prerequisites:
+    Пользователь должен быть зарегистрирован в системе
+    Открыта страница: https://codebattle.hexlet.io/remind_password
+  test-data: |
+    Почта = junior@gmail.com
+  steps:
+    - Ввести почту
+    - Нажать на кнопку "Submit"
+    - Проверить наличие письма на почте для сброса пароля от системы 
+  expected-result: |
+    Пользователь должен получить письмо для сброса пароля от системы
+
+- summary: |
+    Выход из профиля
+  requirement: |
+    При нажатии "Sign Out" пользователь выходит из системы и попадает на стартовую страницу
+  prerequisites:
+    Пользователь авторизован
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Sign Out"
+  expected-result: |
+    Пользователь должен выйти из системы. Открыта стартовая страница
+
+- summary: |
+    Проверка входа пользователя с несуществующей почтой и паролем
+  requirement: |
+    При неправильной почте или пароле пользователь должен получить сообщение об ошибке
+  prerequisites:
+    Открыта страница: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    Почта = senior@gmail.com Пароль = ‮rFO1nfg$hjKm‬
+  steps:
+    - Ввести почту
+    - Ввести пароль
+    - Нажать на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить сообщение об ошибке
+
+- summary: |
+    Просмотр профиля пользователя. Статистика
+  requirement: |
+    При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о статистике игр
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "My profile"
+  expected-result: |
+    Пользователь должен перейти на страницу своего профиля с информацией о статистике игр
+
+- summary: |
+    Просмотр профиля пользователя. Завершенные игры
+  requirement: |
+    При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о завершенных играх
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "My profile"
+    - В профиле выбрать вкладку "Completed game"
+  expected-result: |
+    Пользователь должен перейти на страницу своего профиля с информацией о завершенных играх
+
+- summary: |
+    Настройки профиля
+  requirement: |
+    При нажатии на "Settings" пользователь переходит на страницу настроек своего профиля
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Settings"
+  expected-result: |
+    Пользователь должен перейти на страницу настроек своего профиля
+
+- summary: |
+    Изменение имени пользователя
+  requirement: |
+    Успешное изменение имени пользователя через настройки
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" ввести новое значение (диапазон: от 3 до 16 символов)
+    - Нажать на кнопку "Save"
+  expected-result: |
+    Имя пользователя изменено
+
+- summary: |
+    Проверка отображения ошибки при ниже допустимом количестве символов в поле "Your name"
+  requirement: |
+    Получение ошибки при изменении имени пользователя равное 2 символам
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" ввести 2 символа
+  expected-result: |
+    Пользователь должен получить ошибку "Should be at least 3 characters"
+
+- summary: |
+    Проверка отображения ошибки при выше допустимом количестве символов в поле "Your name"
+  requirement: |
+    Получение ошибки при изменении имени пользователя равное 17 символам
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" ввести 17 символов
+  expected-result: |
+    Пользователь должен получить ошибку "Should be 16 character(s) or less"
+
+- summary: |
+    Изменение имени пользователя при минимально допустимом количестве символов
+  requirement: |
+    Успешное изменение имени пользователя равное 3 символам
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" ввести 3 символа
+  expected-result: |
+    Имя пользователя изменено
+
+- summary: |
+    Изменение имени пользователя при максимально допустимом количестве символов
+  requirement: |
+    Успешное изменение имени пользователя равное 16 символам
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" ввести 16 символов
+  expected-result: |
+    Имя пользователя изменено
+
+- summary: |
+    Проверка отображения ошибки при пустом поле "Your name" на странице настроек
+  requirement: |
+    Поле "Your name" на странице настроек не должно быть пустым
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В поле "Your name" удалить все символы
+  expected-result: |
+    Пользователь должен получить ошибку "Field can't be empty"
+
+- summary: |
+    Проверка отображения ошибки при добавление пробела в поле "Your name" на странице настроек
+  requirement: |
+    Поле "Your name" на странице настроек не может начинаться или заканчиваться пустым символом
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести в Your name 3 пробела
+  expected-result: |
+    Пользователь должен получить ошибку "Can't start or end with empty symbols"
+
+- summary: |
+    Проверка отображения ошибки при добавление символов или цифр в поле "Your name" на странице настройки
+  requirement: |
+    Поле "Your name" на странице настройки должно начинаться с латинской буквы
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Ввести в Your name 3 цифры или символа
+  expected-result: |
+    Пользователь должен получить ошибку "Can contain letters, numbers and underscores and should begin with a Latin letter"
+
+- summary: |
+    Выбор языка в настройках профиля
+  requirement: |
+    Выбор и сохранение языка программирования
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В выпадающем списке "Your weapon" выбрать любой язык
+    - Нажать на кнопку "Save"
+  expected-result: |
+    Изменение языка сохранены
+
+- summary: |
+    Выбор звуковой дорожки в настройках профиля
+  requirement: |
+    Выбор и сохранение звуковой дорожки
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В списке "Select sound type" выбрать "Silent"
+    - Нажать на кнопку "Save"
+  expected-result: |
+    Выбранная звуковая дорожка сохранена
+
+- summary: |
+    Выбор максимальной громкости звука в настройках профиля
+  requirement: |
+    Выбор и сохранение максимальной громкости звука
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В списке "Select sound level" нажать на ползунок
+    - Перетащить ползунок в крайне правое положение
+    - Нажать на кнопку "Save"
+  expected-result: |
+    Максимальная громкость звука сохранена
+
+- summary: |
+    Выбор минимальной громкости звука в настройках профиля
+  requirement: |
+    Выбор и сохранение минимальной громкости звука
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/settings
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - В списке "Select sound level" нажать на ползунок
+    - Перетащить ползунок в крайне левое положение
+    - Нажать на кнопку "Save"
+  expected-result: |
+    Минимальной громкость звука сохранена
+
+- summary: |
+    Просмотр рейтинг пользователей
+  requirement: |
+    При нажатии на "Users rating" пользователь переходит на страницу рейтинга пользователей
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Users rating"
+  expected-result: |
+    Пользователь должен перейти на страницу рейтинга пользователей
+
+- summary: |
+    Просмотр рейтинг пользователей за последнюю неделю
+  requirement: |
+    В таблице пользователей "Users rating" есть возможность фильтровать активных пользователей за прошедшую неделю
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/users
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на кнопку "weekly"
+  expected-result: |
+    Пользователь должен увидеть таблицу с отфильтрованными активными пользователями за последнюю неделю
+
+- summary: |
+    
+  requirement: |
+    
+  prerequisites:
+    
+  test-data: |
+    
+  steps:
+    - 
+    - 
+    - 
+  expected-result: |
+    Пользователь должен получить письмо для сброса пароля от системы
+
+- summary: |
+    
+  requirement: |
+    
+  prerequisites:
+    
+  test-data: |
+    
+  steps:
+    - 
+    - 
+    - 
+  expected-result: |
+    Пользователь должен получить письмо для сброса пароля от системы
