@@ -1142,6 +1142,65 @@
   expected-result: |
     Турнирная сетка завершена. Пользователь должен вернуться к списку всех турниров
 
+- summary: |
+    Переход на страницу CodeBattle в Github 
+  requirement: |
+    При нажатии на "SourceCode" пользователь переходит на страницу CodeBattle в Github 
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "SourceCode"
+  expected-result: |
+    В новой вкладке браузера осуществлен переход на страницу CodeBattle в Github 
+
+- summary: |
+    Переход на главную страницу обучающей платформы Hexlet
+  requirement: |
+    При нажатии на "Hexlet" пользователь переходит на главную страницу обучающей платформы Hexlet
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Hexlet"
+  expected-result: |
+    В новой вкладке браузера осуществлен переход на главную страницу обучающей платформы Hexlet
+
+- summary: |
+    Переход в группу CodeBattle в Dicord
+  requirement: |
+    При нажатии на "Join Discord" пользователь переходит к форме добавление в группу CodeBattle в Dicord
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Join Discord"
+  expected-result: |
+    В новой вкладке браузера осуществлен переход на страницу добавления в группу CodeBattle в Dicord
+
+- summary: |
+    Переход в группу CodeBattle в Telegram
+  requirement: |
+    При нажатии на "Tg#codebattle" пользователь переходит к форме добавление в группу CodeBattle в Telegram
+  prerequisites:
+    Пользователь авторизован.
+    Открыта страница: https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
+  steps:
+    - Нажать на иконку профиля
+    - В списке меню выбрать "Tg#codebattle"
+  expected-result: |
+    В новой вкладке браузера осуществлен переход на страницу добавления в группу CodeBattle в Telegram
 
 - summary: |
     
