@@ -239,7 +239,7 @@
     Создания пакета задач
   status: pass
 
- summary: |
+- summary: |
     Редактирование пакета задач
   status: pass
 
@@ -267,7 +267,7 @@
     Отправление сообщений в чате турнирной сетки
   status: pass
 
- summary: |
+- summary: |
     Создание турнирной сетки
   status: pass
 
@@ -295,7 +295,7 @@
     Старт турнирной сетки
   status: pass
 
- summary: |
+- summary: |
     Завершение турнирной сетки
   status: pass
 
