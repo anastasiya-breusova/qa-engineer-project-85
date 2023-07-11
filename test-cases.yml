@@ -20,9 +20,9 @@
     Регистрация на сайте через GitHub
   requirement: |
     При верно заполненных полях формы регистрации через GitHub происходит создание и авторизация пользователя в системе
-  prerequisites:
+  prerequisites: |
     Создан профиль в Github
-    Открыта страница регистрации: "https://codebattle.hexlet.io/users/new?locale=en&next=%2F"
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин Github = junior@gmail.com Пароль Github = rFO1nfg
   steps:
@@ -37,9 +37,9 @@
     Регистрация на сайте через Discord
   requirement: |
     При верно заполненных полях формы регистрации через Discord происходит создание и авторизация пользователя в системе
-  prerequisites:
+  prerequisites: |
     Создан профиль в Discord
-    Открыта страница регистрации: "https://codebattle.hexlet.io/users/new?locale=en&next=%2F"
+    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин Discord = junior@gmail.com Пароль Discord = rFO1nfg
   steps:
@@ -54,7 +54,7 @@
     Проверка отображения ошибки при пустом поле "Nickname" на странице регистрации
   requirement: |
     Поле "Nickname" на странице регистрации должно быть заполнено
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
@@ -69,7 +69,7 @@
     Проверка отображения ошибки при добавление пробела в поле "Nickname" на странице регистрации
   requirement: |
     Поле "Nickname" на странице регистрации не может начинаться или заканчиваться пустым символом
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
@@ -85,7 +85,7 @@
     Проверка отображения ошибки при добавление символов или цифр в поле "Nickname" на странице регистрации
   requirement: |
     Поле "Nickname" на странице регистрации должно начинаться с латинской буквы
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин = !"№ Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
@@ -101,7 +101,7 @@
     Проверка отображения ошибки при пустом поле "Password" на странице регистрации
   requirement: |
     Поле "Password" на странице регистрации должно быть заполнено
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
      Логин = junior Почта = junior@gmail.com 
@@ -116,7 +116,7 @@
     Проверка отображения ошибки при добавление пробела в поле "Password" на странице регистрации
   requirement: |
     Поле "Password" на странице регистрации не может начинаться или заканчиваться пустым символом
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин = junior Почта = junior@gmail.com 
@@ -132,7 +132,7 @@
     Проверка отображения ошибки при несовпадении паролей в полях "Password" на странице регистрации
   requirement: |
     Поля "Password" на странице регистрации должны совпадать
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин = junior Почта = junior@gmail.com Пароль = rFO1nfg$hjKm Пароль = 123456
@@ -149,7 +149,7 @@
     Проверка отображения ошибки при пустом проверочном поле "Password" на странице регистрации
   requirement: |
     Проверочное поле "Password" на странице регистрации не должно быть пустым
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
      Логин = junior Почта = junior@gmail.com Пароль = rFO1nfg$hjKm 
@@ -165,7 +165,7 @@
     Проверка отображения ошибки при ниже допустимом количестве символов в поле "Password"
   requirement: |
     Поле "Password" на странице регистрации должно состоять от 6 символов
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
    Логин = junior Почта = junior@gmail.com
@@ -179,7 +179,7 @@
     Проверка отображения ошибки при выше допустимом количестве символов в поле "Password"
   requirement: |
     Поле "Password" на странице регистрации должно состоять до 16 символов
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
     Логин = junior Почта = junior@gmail.com
@@ -193,7 +193,7 @@
     Авторизация на сайте через форму авторизации
   requirement: |
     При верно заполненных полях формы авторизации происходит переход пользователя на главную страницу
-  prerequisites:
+  prerequisites: |
     Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Почта = junior@gmail.com Пароль = rFO1nfg$hjKm
@@ -208,7 +208,7 @@
     Авторизация на сайте через GitHub
   requirement: |
     При верно заполненных полях формы регистрации через GitHub происходит переход пользователя на главную страницу 
-  prerequisites:
+  prerequisites: |
     Создан профиль в Github
     Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
@@ -225,7 +225,7 @@
     Авторизация на сайте через Discord
   requirement: |
     При верно заполненных полях формы регистрации через Discord происходит переход пользователя на главную страницу 
-  prerequisites:
+  prerequisites: |
     Создан профиль в Discord
     Открыта страница регистрации: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
@@ -242,7 +242,7 @@
     Получение письма на почту для сброса пароля
   requirement: |
     При верно указанной почте, пользователь получает письмо для сброса пароля
-  prerequisites:
+  prerequisites: |
     Пользователь должен быть зарегистрирован в системе
     Открыта страница: https://codebattle.hexlet.io/remind_password
   test-data: |
@@ -258,7 +258,7 @@
     Выход из профиля
   requirement: |
     При нажатии "Sign Out" пользователь выходит из системы и попадает на стартовую страницу
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -273,7 +273,7 @@
     Проверка входа пользователя с несуществующей почтой и паролем
   requirement: |
     При неправильной почте или пароля пользователь должен получить сообщение об ошибке
-  prerequisites:
+  prerequisites: |
     Открыта страница: https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Почта = senior@gmail.com Пароль = ‮rFO1nfg$hjKm‬
@@ -288,7 +288,7 @@
     Просмотр профиля пользователя. Статистика
   requirement: |
     При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о статистике игр
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -303,7 +303,7 @@
     Просмотр профиля пользователя. Завершенные игры
   requirement: |
     При нажатии на "My profile" пользователь переходит на страницу своего профиля с информацией о завершенных играх
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -319,7 +319,7 @@
     Настройки профиля
   requirement: |
     При нажатии на "Settings" пользователь переходит на страницу настроек своего профиля
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -334,7 +334,7 @@
     Изменение имени пользователя
   requirement: |
     Успешное изменение имени пользователя через настройки
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -349,7 +349,7 @@
     Проверка отображения ошибки при ниже допустимом количестве символов в поле "Your name"
   requirement: |
     Получение ошибки при изменении имени пользователя равное 2 символам
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -363,7 +363,7 @@
     Проверка отображения ошибки при выше допустимом количестве символов в поле "Your name"
   requirement: |
     Получение ошибки при изменении имени пользователя равное 17 символам
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -377,7 +377,7 @@
     Изменение имени пользователя при минимально допустимом количестве символов
   requirement: |
     Успешное изменение имени пользователя равное 3 символам
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -391,7 +391,7 @@
     Изменение имени пользователя при максимально допустимом количестве символов
   requirement: |
     Успешное изменение имени пользователя равное 16 символам
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -405,7 +405,7 @@
     Проверка отображения ошибки при пустом поле "Your name" на странице настроек
   requirement: |
     Поле "Your name" на странице настроек не должно быть пустым
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -419,7 +419,7 @@
     Проверка отображения ошибки при добавление пробела в поле "Your name" на странице настроек
   requirement: |
     Поле "Your name" на странице настроек не может начинаться или заканчиваться пустым символом
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -433,7 +433,7 @@
     Проверка отображения ошибки при добавление символов или цифр в поле "Your name" на странице настройки
   requirement: |
     Поле "Your name" на странице настройки должно начинаться с латинской буквы
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -447,7 +447,7 @@
     Выбор языка программирования в настройках профиля
   requirement: |
     Выбор и сохранение языка программирования
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -462,7 +462,7 @@
     Выбор звуковой дорожки в настройках профиля
   requirement: |
     Выбор и сохранение звуковой дорожки
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -477,7 +477,7 @@
     Выбор максимальной громкости звука в настройках профиля
   requirement: |
     Выбор и сохранение максимальной громкости звука
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -493,7 +493,7 @@
     Выбор минимальной громкости звука в настройках профиля
   requirement: |
     Выбор и сохранение минимальной громкости звука
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/settings
   test-data: |
@@ -509,7 +509,7 @@
     Просмотр страницы Рейтинг пользователей
   requirement: |
     При нажатии на "Users rating" пользователь переходит на страницу рейтинга пользователей
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -524,7 +524,7 @@
     Просмотр рейтинговой таблицы пользователей за последнюю неделю
   requirement: |
     В таблице пользователей "Users rating" есть возможность фильтровать активных пользователей за прошедшую неделю
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -538,7 +538,7 @@
     Просмотр рейтинговой таблицы пользователей за последний месяц
   requirement: |
     В таблице пользователей "Users rating" есть возможность фильтровать активных пользователей за последний месяц
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -552,7 +552,7 @@
     Просмотр рейтинговой таблицы пользователей за все время
   requirement: |
     В таблице пользователей "Users rating" есть возможность фильтровать активных пользователей за все время
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -566,7 +566,7 @@
     Просмотр рейтинговой таблицы пользователей вместе с ботами
   requirement: |
     Отображение ботов и пользователей в рейтинговой таблице "Users rating"
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -580,7 +580,7 @@
     Просмотр рейтинговой таблицы пользователей без ботов
   requirement: |
     Отображение только пользователей в рейтинговой таблице "Users rating"
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -594,7 +594,7 @@
     Вывод выбранного количества пользователей в рейтинговой таблице пользователей
   requirement: |
     Отображение выбранного количества пользователей из выпадающего списка "Users per page" в рейтинговой таблице "Users rating"
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -609,7 +609,7 @@
     Поиск по имени пользователя в рейтинговой таблице пользователей
   requirement: |
     Таблица рейтинга отражает выборку пользователей в соответствии с указанными символами в поле поиска
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -624,7 +624,7 @@
     Сортировка пользователей в таблицы рейтинга по возрастанию ранга
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по возрастанию ранга пользователей
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -638,7 +638,7 @@
     Сортировка пользователей в таблицы рейтинга по убыванию ранга
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по убыванию ранга пользователей
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -652,7 +652,7 @@
     Сортировка пользователей в таблицы рейтинга по убыванию рейтинга
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по убыванию рейтинга пользователей
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -666,7 +666,7 @@
     Сортировка пользователей в таблицы рейтинга по возрастанию рейтинга
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по возрастанию рейтинга пользователей
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -680,7 +680,7 @@
     Сортировка пользователей в таблицы рейтинга по убыванию количества сыгранных игр
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по убыванию количества сыгранных игр
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -694,7 +694,7 @@
     Сортировка пользователей в таблицы рейтинга по возрастанию количества сыгранных игр
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по возрастанию количества сыгранных игр
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -708,7 +708,7 @@
     Сортировка пользователей в таблицы рейтинга по убыванию даты регистрации в системе
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по убыванию даты регистрации в системе
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -722,7 +722,7 @@
     Сортировка пользователей в таблицы рейтинга по возрастанию даты регистрации в системе
   requirement: |
     В таблице рейтинга должна быть возможность сортировки по возрастанию даты регистрации в системе
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -736,7 +736,7 @@
     Переход на профиль Github пользователя из таблицы рейтинга
   requirement: |
     При нажатии на иконку Github, выбранного пользователя в таблице, происходит переход в его профиль Github
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/users
   test-data: |
@@ -751,7 +751,7 @@
     Просмотр страницы Список Задач
   requirement: |
     При нажатии на "Tasks" пользователь переходит на страницу списка задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -766,7 +766,7 @@
     Просмотр страницы описание задачи
   requirement: |
     При нажатии на "Show", в выбранной задаче, пользователь переходит на страницу с описанием задачи
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks
   test-data: |
@@ -781,7 +781,7 @@
      Просмотр страницы создания новой задачи
   requirement: |
     При нажатии на "Create new task" пользователь переходит на страницу создания новой задачи
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks
   test-data: |
@@ -795,7 +795,7 @@
      Cоздание новой задачи
   requirement: |
        Пользователь имеет возможность создавать новые задачи
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks/new
   test-data: |
@@ -810,7 +810,7 @@
        Редактирование задач
   requirement: |
     Пользователь имеет возможность редактировать свои задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks
     Произведен переход на страницу выбранной задачи
@@ -827,7 +827,7 @@
      Удаление задачи
   requirement: |
        Пользователь имеет возможность удалять свои задачи
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks
     Произведен переход на страницу выбранной задачи
@@ -843,7 +843,7 @@
      Просмотр страницы пакетов задач
   requirement: |
     При нажатии на "Task packs" пользователь переходит на страницу просмотра пакетов задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tasks
   test-data: |
@@ -857,7 +857,7 @@
      Просмотр описания пакета задач
   requirement: |
     При нажатии на "Show",выбранного пакета задач, пользователь переходит на страницу описания пакета задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/task_packs
   test-data: |
@@ -872,7 +872,7 @@
      Просмотр страницы создания пакетов задач
   requirement: |
     При нажатии на "Create new task pack" пользователь переходит на страницу создания нового пакета задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/task_packs
   test-data: |
@@ -886,7 +886,7 @@
      Создания пакета задач
   requirement: |
     Пользователь имеет возможность создавать пакеты задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/task_packs/new
   test-data: |
@@ -903,7 +903,7 @@
        Редактирование пакета задач
   requirement: |
     Пользователь имеет возможность редактировать пакеты задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/task_packs
     Произведен переход на страницу выбранного пакета задач
@@ -920,7 +920,7 @@
        Удаление пакета задач
   requirement: |
     Пользователь имеет возможность удалять пакеты задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/task_packs
     Произведен переход на страницу выбранного пакета задач
@@ -936,7 +936,7 @@
     Просмотр страницы Турниры
   requirement: |
     При нажатии на "Tournaments" пользователь переходит на страницу списка задач
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -951,7 +951,7 @@
     Просмотр страницы турнирной сетки
   requirement: |
     При нажатии на "Show" в таблице турниров пользователь переходит на страницу турнирной сетки
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
   test-data: |
@@ -966,7 +966,7 @@
     Просмотр игровой сессии в турнирной сетки
   requirement: |
     Пользовать должен иметь возможность просматривать ход игровых сессий турнирной сетки
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Должен быть создан турнир
@@ -984,7 +984,7 @@
     Возвращение из игровой сессии в турнирную сетку
   requirement: |
     Пользовать должен иметь возможность возвращаться из игровой сессии в турнирную сетку
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Произведен переход в выбранную турнирную сетку
@@ -1001,7 +1001,7 @@
     Отправление сообщений в чате турнирной сетки
   requirement: |
     Пользовать должен иметь возможность отправлять сообщения в чате турнирной сетке
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Произведен переход в выбранную турнирную сетку
@@ -1018,7 +1018,7 @@
      Создание турнирной сетки
   requirement: |
     Пользовать должен иметь возможность создавать турнирную сетку
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
   test-data: |
@@ -1033,7 +1033,7 @@
      Подключение пользователя к турниру
   requirement: |
     Пользовать должен иметь возможность подключаться к турнирной сетке
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Турнир создан и открыт для подключения
@@ -1050,7 +1050,7 @@
      Переход к странице редактирования турнирной сетки
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность его редактировать
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Турнир создан
@@ -1067,7 +1067,7 @@
      Редактирования турнирной сетки
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность его редактировать
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Турнир создан.
@@ -1084,7 +1084,7 @@
     Возврат к турнирной сетке из формы редактирования турнира
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность из формы редактирования возвращаться к турнирной сетке
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Турнир создан.
@@ -1100,7 +1100,7 @@
      Перезапуск турнирной сетки
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность  перезапустить турнирную сетку
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Открыта страница созданного турнира
@@ -1115,7 +1115,7 @@
     Старт турнирной сетки
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность  запустить турнир
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Открыта страница созданного турнира
@@ -1131,7 +1131,7 @@
     Завершение турнирной сетки
   requirement: |
     Пользовать, который создал турнир, должен иметь возможность  завершать турнирную сетку
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/tournaments
     Открыта страница созданного турнира
@@ -1146,7 +1146,7 @@
     Переход на страницу CodeBattle в Github 
   requirement: |
     При нажатии на "SourceCode" пользователь переходит на страницу CodeBattle в Github 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1161,7 +1161,7 @@
     Переход на главную страницу обучающей платформы Hexlet
   requirement: |
     При нажатии на "Hexlet" пользователь переходит на главную страницу обучающей платформы Hexlet
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1176,7 +1176,7 @@
     Переход в группу CodeBattle в Discord
   requirement: |
     При нажатии на "Join Discord" пользователь переходит к форме добавление в группу CodeBattle в Discord
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1191,7 +1191,7 @@
     Переход в группу CodeBattle в Telegram
   requirement: |
     При нажатии на "Tg#codebattle" пользователь переходит к форме добавление в группу CodeBattle в Telegram
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1206,7 +1206,7 @@
     Подключение к игровой сессии в лобби
   requirement: |
     Пользователь может выбрать любого соперника в лобби и подключиться к игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/#lobby
   test-data: |
@@ -1221,7 +1221,7 @@
     Просмотр выбранной турнирной сетки через главную страницу
   requirement: |
     Пользователь может выбрать и просмотреть любую турнирную сетку
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/#tournaments#completedGames
   test-data: |
@@ -1236,7 +1236,7 @@
     Просмотр игровой сессии в завершенных играх
   requirement: |
     Пользователь может выбрать любую завершенную игру и просмотреть сессию
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/#completedGames
   test-data: |
@@ -1251,7 +1251,7 @@
     Отправление сообщений в общем чате на главной странице
   requirement: |
     Пользователь может отправлять сообщения в общем чате на главной странице
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1267,7 +1267,7 @@
     Создание приватного канала с другим пользователем
   requirement: |
     Пользователь создавать приватный канал с другим пользователем
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1283,7 +1283,7 @@
     Фильтрация таблицы лидеров за прошедшую неделю
   requirement: |
     В таблице "Leaderboard" есть возможность фильтровать активных пользователей за прошедшую неделю
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1297,7 +1297,7 @@
     Фильтрация таблицы лидеров за прошедший месяц
   requirement: |
     В таблице "Leaderboard" есть возможность фильтровать активных пользователей за прошедший месяц
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1311,7 +1311,7 @@
     Фильтрация таблицы лидеров за все время
   requirement: |
     В таблице "Leaderboard" есть возможность фильтровать активных пользователей за все время
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1325,7 +1325,7 @@
     Переход в ТОП лист из таблицы лидеров
   requirement: |
     Пользователь должен осуществлять переход к странице рейтинга пользователей черезе "TOP List" в таблице лидеров
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1339,7 +1339,7 @@
     Создание игры на главной странице
   requirement: |
     Пользователь может создать новую игру на главной странице 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
   test-data: |
@@ -1355,7 +1355,7 @@
     Удаление игровой сессии из лобби
   requirement: |
     Пользователь, создавший игровую сессию, может удалить ее из лобби
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Создана игровая сессия пользователем.
@@ -1372,7 +1372,7 @@
     Принять приглашение на игровую сессию от другого пользователя
   requirement: |
     Пользователь может принять приглашение на игровую сессию от другого пользователя
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Создана игровая сессия другим пользователем.
@@ -1389,7 +1389,7 @@
     Отклонить приглашение на игровую сессию от другого пользователя
   requirement: |
     Пользователь может отклонить приглашение на игровую сессию от другого пользователя
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Создана игровая сессия другим пользователем.
@@ -1406,7 +1406,7 @@
     Отклонить приглашение на игровую сессию, отправленное другому пользователю
   requirement: |
     Пользователь может отклонить созданное приглашение на игровую сессию, отправленное другому пользователю
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Создана игровая сессия.
@@ -1423,7 +1423,7 @@
     Изменение языка описания задачи в игровой сессии
   requirement: |
     Пользователь может изменить язык описания задачи в игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1439,7 +1439,7 @@
     Использование гида в игровой сессии 
   requirement: |
     Пользователь может воспользоваться гидом в игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1455,7 +1455,7 @@
     Пропустить информацию от гида в игровой сессии 
   requirement: |
     Пользователь может пропустить информацию от гида в игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1471,7 +1471,7 @@
     Изменение языка программирования в игровой сессии 
   requirement: |
     Пользователь может изменить язык программирования в игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1487,7 +1487,7 @@
     Добавление символов в редактор игровой сессии 
   requirement: |
     Пользователь может добавлять символы в редактор игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1502,7 +1502,7 @@
     Сдаться в игровой сессии 
   requirement: |
     Пользователь может сдаться игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1519,7 +1519,7 @@
     Сбросить код в игровой сессии 
   requirement: |
     Пользователь может сбросить код в редакторе игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1534,7 +1534,7 @@
     Проверить код в игровой сессии 
   requirement: |
     Пользователь может проверить код в редакторе игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1549,7 +1549,7 @@
     Добавить текст в чат игровой сессии 
   requirement: |
     Пользователь должен иметь возможность отправлять сообщения в чате игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1566,7 +1566,7 @@
     Просмотр истории действий в игровой сессии 
   requirement: |
     Пользователь должен иметь возможность отправлять сообщения в чате игровой сессии 
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1582,7 +1582,7 @@
     Реванш игровой сессии 
   requirement: |
     Пользователь должен иметь возможность повторно запустить игровую сессию c прежним противником
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1597,7 +1597,7 @@
       Возврат к главной странице из игровой сессии
   requirement: |
     Пользователь должен иметь возможность вернуться к главной странице из игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1612,7 +1612,7 @@
       Изменить фон редактора игровой сессии (Light)
   requirement: |
     Пользователь должен иметь возможность изменить фон редактора игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1627,7 +1627,7 @@
     Изменить фон редактора игровой сессии (Dark)
   requirement: |
     Пользователь должен иметь возможность изменить фон редактора игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
@@ -1642,7 +1642,7 @@
     Просмотр профиля противника из игровой сессии
   requirement: |
     Пользователь должен иметь просмотреть профиль противника из игровой сессии
-  prerequisites:
+  prerequisites: |
     Пользователь авторизован.
     Открыта страница: https://codebattle.hexlet.io/
     Открыта игровая сессии
