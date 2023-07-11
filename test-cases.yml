@@ -22,7 +22,7 @@
     При верно заполненных полях формы регистрации через GitHub происходит создание и авторизация пользователя в системе
   prerequisites:
     Создан профиль в Github
-    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    Открыта страница регистрации: "https://codebattle.hexlet.io/users/new?locale=en&next=%2F"
   test-data: |
     Логин Github = junior@gmail.com Пароль Github = rFO1nfg
   steps:
@@ -39,7 +39,7 @@
     При верно заполненных полях формы регистрации через Discord происходит создание и авторизация пользователя в системе
   prerequisites:
     Создан профиль в Discord
-    Открыта страница регистрации: https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    Открыта страница регистрации: "https://codebattle.hexlet.io/users/new?locale=en&next=%2F"
   test-data: |
     Логин Discord = junior@gmail.com Пароль Discord = rFO1nfg
   steps:
